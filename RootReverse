@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+    cout << "Please enter a 1 to 5 digit positive integer\n";
+    int number;
+    cin >> number;
+    int number2 = number%10;
+    int number3 = ((number%100) - number%10)/10;
+    int number4 = (number%1000 - (number%100))/100;
+    int number5 = (number%10000 - number%1000)/1000;
+    int number6 = (number%100000 - number%10000)/10000;
+    int rnumber = (number2*10000 + number3*1000 + number4*100 + number5*10 +number6);
+    if (number>=10000)
+    {
+        cout << "Square root of number is " << sqrt(number);
+        cout << "\nReverse of number is ";
+        cout << number2;
+        cout << number3;
+        cout << number4;
+        cout << number5;
+        cout << number6;
+        int rnumber = (number2*10000 + number3*1000 + number4*100 + number5*10 +number6);
+        cout << "\nSquare root of reversed number is " << sqrt(rnumber);
+    }
+    if (number<=10000&&number>=1000){
+        cout << "Square root of number is " << sqrt(number);
+        cout << "\nReverse of number is " << rnumber/10;
+        cout << "\nSquare root of reversed number is " << sqrt(rnumber/10);
+    }
+    if (number<=1000&&number>=100){
+        cout << "Square root of number is " << sqrt(number);
+        cout << "\nReverse of number is " << rnumber/100;
+        cout << "\nSquare root of reversed number is " << sqrt(rnumber/100);
+    }
+    if (number<=100&&number>=10){
+        cout << "Square root of number is " << sqrt(number);
+        cout << "\nReverse of number is " << rnumber/1000;
+        cout << "\nSquare root of reversed number is " << sqrt(rnumber/1000);
+    }
+    if (number<10){
+        cout << "Square root of number is " << sqrt(number);
+        cout << "\nReverse of number is " << number;
+        cout << "\nSquare root of reversed number is " << sqrt(number);
+    }
+}
